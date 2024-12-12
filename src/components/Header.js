@@ -3,7 +3,7 @@ import cart from '../img/cart.svg';
 import heart from '../img/heart.svg'
 import  user from '../img/user.svg'
 
-function Header (){
+function Header (props){
     return (
         <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
@@ -14,19 +14,19 @@ function Header (){
         </div>
       </div>
       <ul className="d-flex">
-        <li className ='mr-5'>
+        <li  onClick={props.onClickCart}  className ='mr-5 cu-p'>
         <img width={18} height={18} src={cart}  />
           <span>1205 руб.</span>
         </li>
   
         <li>
        <img width={18} height={18} src={heart} />
-       {/* <p>Закладки</p> */}
+       <p>Закладки</p>
         </li>
   
         <li>
         <img width={18} height={18} src={user} />
-        {/* <p>Профиль</p> */}
+        <p>Профиль</p>
         </li>
   
       </ul>

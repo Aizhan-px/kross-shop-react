@@ -34,6 +34,7 @@ img{
     h3,
     p{
       margin: 0;
+      
     }
   }
 }
@@ -44,15 +45,7 @@ img{
   }
 
   
-  .button {
-    background-color: #FFFFFF;
-    border: 1px solid #f2f2f2;
-    box-sizing: border-box;
-    border-radius: 8px;
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
-  }
+ 
 
 .search-block {
   border: 1px solid #f3f3f3;
@@ -148,25 +141,25 @@ color: #000000;
   }
  }
 
-//  .greenButton {
-//     width: 100%;
-//     height: 55px;
-//     background: #9DD558;
-//     border-radius: 18px;
-//     border: 0;
-//     color: #fff;
-//     font-size: 16px;
-//     font-size: 500px;
-//     transition:  0.1s ease-in-out;
+ .greenButton {
+    width: 100%;
+    height: 55px;
+    background: #9DD558;
+    border-radius: 18px;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    // font-size: 500px;
+    transition:  0.1s ease-in-out;
   
-//     &hover {
-//       background: lighen(#9DD558);
-//     }
+    &hover {
+      background: lighen(#9DD558);
+    }
   
-//     &hover {
-//       background: darken(#9DD558,5%);
-//     }
-//   }
+    &hover {
+      background: darken(#9DD558,5%);
+    }
+  }
  
 
 .cartItem {

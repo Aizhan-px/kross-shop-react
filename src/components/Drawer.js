@@ -1,32 +1,31 @@
-import Button from "../img/btn-remove.png";
- function Drawer() {
+// import Button from "../img/btn-remove.png";
+
+ function Drawer({onClose, items = [] }) {
     return (
-        <div  style={{ display: 'none'}} className="overlay">
+        <div className="overlay">
         <div className="drawer">
         <h3 className="d-flex justify-between mb-30 cu-p">
-          Корзина<img className="cu-p" src={require("../img/btn-remove.png")} alt=""></img>
+          Корзина 
+      <img onClick={onClose} 
+      className="cu-p" 
+      src={require("../img/btn-remove.png")} 
+      alt="Close"></img>
         </h3>
     
         <div className="items">
+          {items.map((obj) => (  
         <div className="cartItem d-flex align-center mb-20">
-        <div style={{backgroundImage:'url(../img/sneakers/sneak1.png)'}} 
+        <div 
+             style={{backgroundImage:'url(../img/sneakers/sneak1.png)'}} 
              className="cartItemImg"> </div>
-          <div className="mr-20 flex" >
+
+          <div className="mr-20 flex " >
             <p cassName="mb-5"> Мужские Кроссовки Nike Air Max 270</p>
             <b>12 999 руб.</b>
           </div>
           <img className="removeBtn" src={require("../img/btn-remove.png")} alt="remove"/></div>
-
-        <div className="cartItem d-flex align-center mb-20">
-        <div style={{backgroundImage:'url(../img/sneakers/sneak1.png)'}} 
-             className="cartItemImg"></div>
-
-          <div className="mr-20 flex" >
-            <p className="mb-5"> Мужские Кроссовки Nike Air Max 270</p>
-            <b>12 999 руб.</b>
-          </div>
-          <img className="removeBtn" src={require("../img/btn-remove.png")} alt="remove"></img>
-        </div>
+        ))}
+        
         
    <div className="cartTotalBlock">
   <ul>
